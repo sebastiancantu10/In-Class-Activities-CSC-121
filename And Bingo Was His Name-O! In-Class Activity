@@ -1,0 +1,47 @@
+//
+// main.cpp
+// And Bingo Was His Name-O! In-Class Activity
+//
+// Created by Sebastian Cantu on 9/8/25.
+//
+#include <iostream>
+#include <limits>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main() {
+  cout << "Welcome to the Bingo Number Generator!" << endl << endl;
+  while (true) { //while loop is running the entire time the question below is being asked
+    string response;
+    srand(time(nullptr)); //random number seed
+    
+    cout << "Would you like to generate a number?" << endl; //question asked. loop breaks if 2 is entered. loop continues if 1 is entered
+    cout << "1. Yes" << endl << "2. No" << endl << endl;
+    cin >> response;
+    
+    if (response == "2") {
+      cout << "\nGoodbye!";
+      break; //breaks if 2
+    }
+    
+    else if (response == "1") { //runs the if else chain below if 1
+      int bingo_Number = rand() % 75 + 1; //this is the range 1-75
+        if (bingo_Number >= 1 && bingo_Number <= 15) {
+          cout << "\nYour number is B" << bingo_Number << "!" << endl << endl;
+        }
+        else if (bingo_Number >= 16 && bingo_Number <= 30) {
+          cout << "\nYour number is I" << bingo_Number << "!" << endl << endl;
+        }
+        else if (bingo_Number >= 31 && bingo_Number <= 45) {
+          cout << "\nYour number is N" << bingo_Number << "!" << endl << endl;
+        }
+        else if (bingo_Number >= 46 && bingo_Number <= 60) {
+          cout << "\nYour number is G" << bingo_Number << "!" << endl << endl;
+        }
+        else if (bingo_Number >= 61 && bingo_Number <= 75) {
+          cout << "\nYour number is O" << bingo_Number << "!" << endl << endl;
+        }
+      }
+    }
+}
