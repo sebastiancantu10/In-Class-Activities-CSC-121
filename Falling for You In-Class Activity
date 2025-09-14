@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip> //has setw, iomanipulation
+#include <cmath> //old c math library. 
+using namespace std;
+int main() {
+double height;
+double withAirResistance;
+double noAirResistance;
+const double gravity = 9.8;
+const double squirrelMass = 0.450;
+const double dragCoeffecient = 0.24;
+
+cout << "What is the starting height of your squirrel (in meters)?\n";
+cin >> height;
+
+noAirResistance = sqrt(2 * (gravity) * (height));
+//ut << "5: " << fixed << setprecision(3);
+withAirResistance = sqrt((squirrelMass * gravity) / (dragCoeffecient));
+
+cout << "\nWithout air resistance, the terminal velocity of the squirrel is " << fixed << setprecision(2) << noAirResistance << " m/s.\n";
+cout << "With air resistance, the terminal velocity of the squirrel is " << fixed << setprecision(2) << withAirResistance << " m/s.\n\n\n"
+cout << "And I'm freeeee... free faaaaaalling...";
+}
