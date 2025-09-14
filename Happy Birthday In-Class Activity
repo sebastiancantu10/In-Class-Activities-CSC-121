@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+cout << "Enter your name: ";
+string name = "";
+cin >> name;
+
+cout << "Happy Birthday to you!\n";
+cout << "Happy Birthday to you!\n";
+cout << "Happy Birthday, dear " << name << "!\n";
+cout << "Happy Birthday to you!\n";
+}
