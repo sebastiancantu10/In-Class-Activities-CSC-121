@@ -1,0 +1,42 @@
+//
+// main.cpp
+// IFs and FORs In Class Activity
+//
+// Created by Sebastian Cantu on 9/3/25.
+//
+#include <iostream>
+using namespace std;
+int main() {
+  int userValue;
+  cout << "Please enter an integer number: ";
+  cin >> userValue;
+  
+  if ((userValue % 3 == 0) && (userValue % 5 == 0)){
+    cout << "FizzBuzz" << endl;
+  }
+
+  else if (userValue % 3 == 0){
+    cout << "Fizz" << endl;
+  }
+  
+  else if (userValue % 5 == 0){
+    cout << "Buzz" << endl;
+  }
+  
+  else {
+    cout << userValue << endl;
+  }
+
+  int first100 = 1;
+  for (int i = 1; i <= 100; i++){
+    cout << first100++ << endl;
+  }
+
+  int first100_Sum = 0;
+  for (int i = 0; i <= 100; i++){
+    first100_Sum += i;
+  }
+  
+  cout << "The Sum of the first 100 positive integers is: "<< first100_Sum << endl;
+  // (n(n+1))/2 useful for algorithims at the end of CS 2 and cool math prodigy Carl Friedrich Gauss did it as an elementary kid
+}
